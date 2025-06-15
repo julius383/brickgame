@@ -1,6 +1,7 @@
 local M = {}
 
 local lume    = require("lume")
+local stringx = require("pl.stringx")
 
 local FONT = love.graphics.newFont("fonts/bedstead-condensed.otf", 60)
 
@@ -91,4 +92,19 @@ function M.draw_paused(game_width, game_height)
     love.graphics.setColor(lume.color("#222222"))
     love.graphics.draw (text, textx, texty)
 end
+
+
+function M.show_array(t, depth)
+    local depth = depth or 0
+    local s = stringx.indent(string.format("%s\n", t), depth * 4)
+    for index, value in ipairs(t) do
+        if type(value) == "table" then
+            s = s .. M.show_array(value, depth + 1) .. "\n"
+        else
+            s = s .. stringx.indent(string.format("%d = %s", index, value), depth * 4) .. "\n"
+        end
+    end
+    return s
+end
+
 return M

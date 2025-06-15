@@ -73,8 +73,6 @@ function Wave:clear_line()
 end
 
 function Wave:draw()
-    love.graphics.setColor(lume.color("#222222"))
-    love.graphics.rectangle("line", 0, 0, util.DWIDTH, util.DHEIGHT)
     for row = 1, #self.board do
         for col = 1, self.columns do
             local v = self.board[row][col]

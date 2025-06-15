@@ -3,7 +3,7 @@
 Implementation of various games from classic 999-in-1 brick games using [Love2D][1].
 
 - [x] wavebreaker
-- [ ] snake
+- [x] snake
 - [ ] tetris
 - [ ] traffic dogger
 
@@ -14,7 +14,9 @@ and `just run` to start the game. The `build` command creates a zip file of the
 repo with a `.love` extension and the `run` command invokes `love` with the
 zip file.
 
-## WaveBreaker
+## Games
+
+### WaveBreaker
 
 ![WaveBreaker](images/wavebreaker.png)
 
@@ -22,6 +24,31 @@ zip file.
 - The wave advances periodically
 - Game ends when wave reaches bottom
 
+Controls:
 
+- "A"/"Left" - move left
+- "D"/"Right" - move left
+- "W"/"Up" - fire bullet
+- "Space" - pause
+- "q" - Quit
+
+
+### Snake
+
+![Snake](images/snake.png)
+
+- snake moves around a grid
+- food randomly appears on grid
+- snake grows longer when it eats food
+- bonus food appears and disappears if not eaten
+
+Controls:
+
+- "A"/"Left" - move left
+- "D"/"Right" - move left
+- "W"/"Up" - move up
+- "S"/"Down" - move down
+- "Space" - pause
+- "q" - Quit
 
 [1]: https://www.love2d.org/
